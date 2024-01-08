@@ -2,7 +2,7 @@ import { initSettings } from "./settings.js";
 import { initMobAttackTool, MobAttackDialog } from "./mobAttackTool.js";
 import { MobAttacks } from "./mobAttackTool.js";
 
-export const moduleName = "mob-attack-tool";
+export const moduleName = "pf2e-mob-attack-tool";
 
 Hooks.once("init", () => {
 	console.log("Mob Attack Tool | Adding Mob Attack Tool.");

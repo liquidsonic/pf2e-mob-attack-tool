@@ -170,7 +170,7 @@ export async function rollMobAttackIndividually(data) {
 	messageData["totalPluralOrNot"] = totalPluralOrNot;
 
 	// Send message
-	let messageText = await renderTemplate('modules/mob-attack-tool/templates/mat-msg-individual-rolls.html', messageData);
+	let messageText = await renderTemplate('modules/pf2e-mob-attack-tool/templates/mat-msg-individual-rolls.html', messageData);
 	if (!game.settings.get(moduleName, "noResultsMessage")) {
 		await sendChatMessage(messageText);
 	}

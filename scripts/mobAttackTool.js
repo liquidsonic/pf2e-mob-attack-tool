@@ -76,7 +76,7 @@ export class MobAttackDialog extends FormApplication {
 		return mergeObject(super.defaultOptions, {
 			title: "Mob Attack Tool",
 			id: "mob-attack-tool-dialog",
-			template: "modules/mob-attack-tool/templates/mat-dialog.html",
+			template: "modules/pf2e-mob-attack-tool/templates/mat-dialog.html",
 			width: "505",
 			height: "auto",
 			closeOnSubmit: false,
@@ -548,7 +548,7 @@ export class MobAttackDialog extends FormApplication {
 				}
 			}
 
-			let dialogMobList = await renderTemplate('modules/mob-attack-tool/templates/mat-dialog-mob-list.html', { mobList: mobList, isGM: game.user.isGM, noSelectMob: noSelectMob });
+			let dialogMobList = await renderTemplate('modules/pf2e-mob-attack-tool/templates/mat-dialog-mob-list.html', { mobList: mobList, isGM: game.user.isGM, noSelectMob: noSelectMob });
 
 			let selectedMob = await new Promise((resolve) => {
 				new Dialog({
@@ -600,7 +600,7 @@ export class MobAttackDialog extends FormApplication {
 					default: "select"
 				}).render(true);
 			});
-			if (selectedMob === initialMobName || selectedMob === "" || game.settings.get(moduleName, "hiddenMobList") === {}) return;
+			if (selectedMob === initialMobName || selectedMob === "" /*|| game.settings.get(moduleName, "hiddenMobList") === {}*/) return;
 
 			html.find(`input[name="mobName"]`)[0].value = selectedMob;
 			await loadMob(event, selectedMob);
@@ -727,7 +727,7 @@ export class MobAttackDialog extends FormApplication {
 			} else {
 				macroName = `${mobAttackData.weapons[key].name} ${game.i18n.localize("MAT.macroNamePrefix")} ${mobList[Object.keys(mobList)[0]].numSelected} ${Object.keys(mobList)[0]}${game.i18n.localize("MAT.macroNamePostfix")}`;
 			}
-			let macroNameTemplate = await renderTemplate("modules/mob-attack-tool/templates/mat-macro-name-dialog.html", { macroName: macroName });
+			let macroNameTemplate = await renderTemplate("modules/pf2e-mob-attack-tool/templates/mat-macro-name-dialog.html", { macroName: macroName });
 			let selectedName = await new Promise((resolve) => {
 				new Dialog({
 					title: game.i18n.localize("Macro Name"),

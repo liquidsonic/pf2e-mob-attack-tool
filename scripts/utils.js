@@ -201,7 +201,7 @@ export async function prepareMonsters(actorList, keepCheckboxes = false, oldMons
 				}
 			}
 		}
-
+    }/*
 		let actorWeapons = {};
 		let items = actor.items.contents;
 		for (let item of items) {
@@ -301,8 +301,8 @@ export async function prepareMonsters(actorList, keepCheckboxes = false, oldMons
 				}
 			}
 		}
-	}
-	return [monsters, weapons, availableAttacks];
+	}*/
+	return [monsters, {}, {}];
 }
 
 export async function prepareMobAttack(html, selectedTokenIds, weapons, availableAttacks, targets, targetAC, numSelected, monsters) {

@@ -1,17 +1,8 @@
 {
-  "id": "mob-attack-tool",
-  "title": "Mob Attack Tool",
-  "description": "A module for dnd5e that adds support for Mob Attacks.",
+  "id": "pf2e-mob-attack-tool",
+  "title": "PF2e Mob Attack Tool",
+  "description": "A module for pf2e that adds support for Mob Attacks.",
   "authors": [
-    {
-      "name": "Stendarpaval (Lupusmalus)"
-    },
-    {
-      "name": "Daft-Develop"
-    },
-    {
-      "name": "4cer"
-    }
   ],
   "languages": [
     {
@@ -36,7 +27,7 @@
   "relationships": {
     "systems": [
       {
-        "id": "dnd5e",
+        "id": "pf2e",
         "type": "system"
       }
     ],
